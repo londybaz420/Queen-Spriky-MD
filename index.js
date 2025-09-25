@@ -21,7 +21,7 @@ const {
     Browsers
   } = require('@whiskeysockets/baileys')
 
-const l = console.log;a
+const l = console.log;
 const {
     getBuffer,
     getGroupAdmins,
