@@ -1,12 +1,25 @@
 const {
-    default: makeWASocket,
+  default: makeWASocket,
     useMultiFileAuthState,
     DisconnectReason,
     jidNormalizedUser,
+    isJidBroadcast,
     getContentType,
+    proto,
+    generateWAMessageContent,
+    generateWAMessage,
+    AnyMessageContent,
+    prepareWAMessageMedia,
+    areJidsSameUser,
+    downloadContentFromMessage,
+    MessageRetryMap,
+    generateForwardMessageContent,
+    generateWAMessageFromContent,
+    generateMessageID, makeInMemoryStore,
+    jidDecode,
     fetchLatestBaileysVersion,
     Browsers
-} = require('@whiskeysockets/baileys');
+  } = require('@whiskeysockets/baileys')
 
 const l = console.log;
 const {
@@ -33,7 +46,7 @@ const axios = require('axios');
 const {
     File
 } = require('megajs');
-const ownerNumber = ['94758900210'];
+const ownerNumber = ['923143200187'];
 
 // Download session from Mega if not exists
 if (!fs.existsSync(__dirname + '/session/creds.json')) {
